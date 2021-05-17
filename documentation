@@ -1,0 +1,5 @@
+Minikube=> local kubernetes cluster
+
+CMD -> minikube start --vm-driver=hyperkit    ->creates and start kubernetes cluster on local     
+
+Deployement is blue print of Pod. usually we create deployment not pod. structure =>[Deployment ->replicas -> Pod]
