@@ -3,3 +3,51 @@ Minikube=> local kubernetes cluster
 CMD -> minikube start --vm-driver=hyperkit    ->creates and start kubernetes cluster on local     
 
 Deployement is blue print of Pod. usually we create deployment not pod. structure =>[Deployment ->replicas -> Pod]
+
+CMDs
+-------------------
+kubectl get nodes
+kubectl get pods
+kubectl get services
+kubectl create deployment nginx-deplymt --image=nginx   (create deployment creates virtual file for deployment configuration)
+kubectl edit deployment nginx-deplymt
+
+kubectl logs [podname]
+kubectl describe pod [podname]
+
+kubectl exec -it [podname] -- bin/bash   (1.This command is usefull to interact with container application terminal 2.here we can see application logs, 3. '-it' stands for interactive terminal  )
+
+****basic example of deployment file*****
+-----------------------------------
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+------------------------------------------
+****Create & apply deployment file*****
+-----------------------------------
+step 1.  touch nginx-deployment.yaml. (create yaml file)
+step 2.  vim nginx-deployment.yaml.  (insert content in yaml file) -> :wq - to save file
+step 3.  kubectl apply -f nginx-deployment.yaml (apply changes of deployment)
+
+------------------------------------------
+****Yaml configuration file details in kubernetes*****
+-----------------------------------
