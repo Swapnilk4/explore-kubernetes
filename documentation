@@ -1,3 +1,42 @@
+Kubernates - 
+-------------------------------------------------
+
+###harerchie =>
+image > container > pod > worker node(server)
+
+###Kubelet - is responsible to run pod and container in side pod
+
+### Kubernates cluster is made by multiple nodes
+
+
+Kubernates cluster contains two type of node . 1.Master node 2. Worker node
+
+1.Master node => containes below section
+
+	a. API server - 
+	b.Scheduler -> decides on which worker node new pod should created , memory management etc
+	c.controller manager -> detect cluster state changes (eg. pod died), and call scheduler to restart or recreate the pod in some of the node
+	d.etcd -> cluster brain, stored pods info in key value pair (cluster metadata)
+	
+	Master nodes requires less resourses
+	
+	
+2. Worker Node - requires more resourses
+				It container kubelets and containers (eg. docker container)
+				
+				
+Minicube- creates vertual box on your laptop. server nodes run in that vertual box
+
+kubectl- commmand line tool for kubernetes
+
+
+Kubernates Cluster types - 
+--------------------------
+Minicube cluster
+Cloud cluster
+
+
+
 Minikube=> local kubernetes cluster
 
 CMD -> minikube start --vm-driver=hyperkit    ->creates and start kubernetes cluster on local     
