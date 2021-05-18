@@ -47,7 +47,9 @@ CMDs
 -------------------
 kubectl get nodes
 kubectl get pods
+kubectl get pod -o wide (all info about pod)
 kubectl get services
+kubectl describe service mongodb-service (all info about service)
 kubectl create deployment nginx-deplymt --image=nginx   (create deployment creates virtual file for deployment configuration)
 kubectl edit deployment nginx-deplymt
 
@@ -88,5 +90,6 @@ step 2.  vim nginx-deployment.yaml.  (insert content in yaml file) -> :wq - to s
 step 3.  kubectl apply -f nginx-deployment.yaml (apply changes of deployment)
 
 ------------------------------------------
-****Yaml configuration file details in kubernetes*****
------------------------------------
+
+CMD=> echo -n 'username' | base64 (Convert text to base 64) 
+
