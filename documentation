@@ -93,3 +93,16 @@ step 3.  kubectl apply -f nginx-deployment.yaml (apply changes of deployment)
 
 CMD=> echo -n 'username' | base64 (Convert text to base 64) 
 
+------------------------------------------
+****      Namespaces     *****
+-----------------------------------
+
+Namespace is virtual cluster inside kubernates cluster. Basically it is used to create logical grouping of kubernates components.
+
+If we wont define namespace then it will take default namespace.
+Usecases - 
+1. Group logical resources into multiple namespaces . eg (Database resources, nginx resources)
+2. If multiple team are working in same cluster. they can use multiple namespaces.
+
+
+
