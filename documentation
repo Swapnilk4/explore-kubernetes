@@ -1,13 +1,13 @@
-Kubernates - 
--------------------------------------------------
+------------------------------------------
+****       Kubernates       *****
+-----------------------------------
 
-###harerchie =>
+harerchie =>
 image > container > pod > worker node(server)
 
-###Kubelet - is responsible to run pod and container in side pod
+Kubelet - is responsible to run pod and container in side pod
 
-### Kubernates cluster is made by multiple nodes
-
+Kubernates cluster is made by multiple nodes
 
 Kubernates cluster contains two type of node . 1.Master node 2. Worker node
 
@@ -35,8 +35,6 @@ Kubernates Cluster types -
 Minicube cluster
 Cloud cluster
 
-
-
 Minikube=> local kubernetes cluster
 
 CMD -> minikube start --vm-driver=hyperkit    ->creates and start kubernetes cluster on local     
@@ -57,9 +55,9 @@ kubectl logs [podname]
 kubectl describe pod [podname]
 
 kubectl exec -it [podname] -- bin/bash   (1.This command is usefull to interact with container application terminal 2.here we can see application logs, 3. '-it' stands for interactive terminal  )
-
-****basic example of deployment file*****
------------------------------------
+-------------------------------------------------------
+****     basic example of deployment file   *****
+-------------------------------------------------
 
 apiVersion: apps/v1
 kind: Deployment
