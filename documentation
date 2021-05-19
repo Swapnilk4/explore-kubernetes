@@ -104,5 +104,14 @@ Usecases -
 1. Group logical resources into multiple namespaces . eg (Database resources, nginx resources)
 2. If multiple team are working in same cluster. they can use multiple namespaces.
 
+------------------------------------------
+****      Ingress     *****
+-----------------------------------
+
+Ingress is responsible for
+1. Mapping of domain name to ip address
+2. Https -> security mgmt
+
+Note- explore more on Ingress
 
 
